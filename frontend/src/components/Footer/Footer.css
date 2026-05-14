@@ -1,8 +1,23 @@
 .footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 
-  margin-top: 20px;
+  margin-top: 28px;
+  padding: 10px 16px;
 
-  font-size: 18px;
+  border-top: 2px solid #c8a000;
+
+  font-size: 11px;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #666;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer::before {
+  content: "EJMA 10th Edition";
+  font-style: italic;
+  color: #aaa;
+  letter-spacing: 0.05em;
 }

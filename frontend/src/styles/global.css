@@ -1,30 +1,104 @@
+/* ─── Reset ─────────────────────────────────────────── */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: #d9d9d9;
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Root Tokens ────────────────────────────────────── */
+:root {
+  --gold:       #c8a000;
+  --gold-light: #e6c200;
+  --gold-dark:  #a07800;
+  --gold-tint:  #fdf6e3;
+  --ink:        #1a1a1a;
+  --ink-soft:   #555;
+  --border:     #ddd;
+  --page-bg:    #fff;
+  --body-bg:    #e8e4de;
 }
 
+/* ─── Body ───────────────────────────────────────────── */
+body {
+  background: var(--body-bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+}
+
+/* ─── Page Shell ─────────────────────────────────────── */
 .page {
   width: 210mm;
   min-height: 297mm;
 
-  background: white;
+  background: var(--page-bg);
 
-  margin: 20px auto;
+  margin: 24px auto;
+  padding: 18px 20px;
 
-  padding: 16px;
-
-  color: #222;
-
+  color: var(--ink);
   position: relative;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.10);
+
+  border-top: 4px solid var(--gold);
 }
 
+/* ─── Evaluation / Info Box ──────────────────────────── */
 .evaluation-box {
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px 14px;
+  font-size: 13px;
+  background: var(--gold-tint);
+  border: 1px solid #e8d88a;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  color: #4a3800;
+  line-height: 1.6;
+}
+
+/* ─── Divider utility ────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+/* ─── Print ──────────────────────────────────────────── */
+@media print {
+  body {
+    background: white;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 0;
+    padding: 12mm 14mm;
+
+    page-break-after: always;
+    box-shadow: none;
+    border-top: 3px solid var(--gold);
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  table,
+  tr,
+  td,
+  section {
+    page-break-inside: avoid;
+  }
 }
