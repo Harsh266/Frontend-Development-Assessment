@@ -1,0 +1,17 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table td {
+  border: 1px solid #bdbdbd;
+  padding: 8px 10px;
+
+  font-size: 14px;
+}
+
+.data-table td:first-child {
+  width: 35%;
+  font-weight: 600;
+  background: #fafafa;
+}
