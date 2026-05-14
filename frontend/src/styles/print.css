@@ -1,0 +1,27 @@
+@media print {
+  body {
+    background: white;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 0;
+    padding: 12mm;
+
+    box-shadow: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  table,
+  tr,
+  td,
+  section {
+    page-break-inside: avoid;
+  }
+}

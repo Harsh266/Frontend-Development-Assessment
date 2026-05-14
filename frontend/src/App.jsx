@@ -1,9 +1,7 @@
-function App() {
+import ReportPage from "./pages/ReportPage";
 
-  return (
-    <>
-    </>
-  )
+function App() {
+  return <ReportPage />;
 }
 
-export default App
+export default App;
