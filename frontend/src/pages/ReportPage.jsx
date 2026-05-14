@@ -7,37 +7,53 @@ import { reportData } from "../data/reportData";
 
 function ReportPage() {
   return (
-    <div className="page">
-      <Header />
+    <>
+      {/* PAGE 1 */}
 
-      <ReportSection title="Contact Details">
-        <DataTable data={reportData.contactDetails} />
-      </ReportSection>
+      <div className="page">
+        <Header />
 
-      <ReportSection title="Design Parameters">
-        <DataTable data={reportData.designParameters} />
-      </ReportSection>
+        <ReportSection title="Contact Details">
+          <DataTable data={reportData.contactDetails} />
+        </ReportSection>
 
-      <ReportSection title="Dimensions">
-        <DataTable data={reportData.dimensions} />
-      </ReportSection>
+        <ReportSection title="Design Parameters">
+          <DataTable data={reportData.designParameters} />
+        </ReportSection>
 
-      <ReportSection title="Material">
-        <DataTable data={reportData.material} />
-      </ReportSection>
+        <ReportSection title="Dimensions">
+          <DataTable data={reportData.dimensions} />
+        </ReportSection>
 
-      <ReportSection title="Result / Summary">
-        <DataTable data={reportData.summary} />
-      </ReportSection>
+        <ReportSection title="Material">
+          <DataTable data={reportData.material} />
+        </ReportSection>
 
-      <ReportSection title="Evaluation">
-        <div style={{ padding: "10px" }}>
-          {reportData.evaluation}
-        </div>
-      </ReportSection>
+        <Footer page={1} />
+      </div>
 
-      <Footer page={1} />
-    </div>
+      {/* PAGE BREAK */}
+
+      <div className="page-break"></div>
+
+      {/* PAGE 2 */}
+
+      <div className="page">
+        <Header />
+
+        <ReportSection title="Result / Summary">
+          <DataTable data={reportData.summary} />
+        </ReportSection>
+
+        <ReportSection title="Evaluation">
+          <div className="evaluation-box">
+            {reportData.evaluation}
+          </div>
+        </ReportSection>
+
+        <Footer page={2} />
+      </div>
+    </>
   );
 }
 

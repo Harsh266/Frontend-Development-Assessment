@@ -1,6 +1,4 @@
 export const reportData = {
-  title: "EJMA 10th Edition Report",
-
   contactDetails: [
     ["Customer", "Galiakotwala Engineering Company Pvt. Ltd."],
     [
@@ -11,7 +9,7 @@ export const reportData = {
       "Project Desc.",
       'SK-20 OPO "Sulfuric Acid Production Site"',
     ],
-    ["End User", 'Charitable Foundation JSC "Apatit" SKP SK-20/1'],
+    ["End User", 'Charitable Foundation JSC "Apatit"'],
     ["Consultant", "Galiakotwala Technical Services"],
   ],
 
@@ -23,7 +21,7 @@ export const reportData = {
 
   dimensions: [
     ["Bellows ID", "2320 mm"],
-    ["Bellows Outside Diameter", "2422.54 mm"],
+    ["Outside Diameter", "2422.54 mm"],
     ["No. of Convolution", "9 Nos"],
     ["Layer Thickness", "1.27 mm"],
   ],
@@ -38,6 +36,8 @@ export const reportData = {
     ["S2", "46.9124 MPa"],
     ["S3", "1.9901 MPa"],
     ["S4", "52.5494 MPa"],
+    ["S5", "10.6543 MPa"],
+    ["S6", "1412.3173 MPa"],
   ],
 
   evaluation:
